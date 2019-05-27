@@ -2,13 +2,13 @@ import React from 'react';
 import './Header.css';
 
 
-function HeaderTitle() {
+function HeaderTitle( {header, subHeader}) {
     return (
         <div className="title">
         <h2>
-            Lambda School
+            {header}
         </h2>
-        <h3>@LambdaSchool - 26 Jan</h3>
+        <h3>{subHeader}</h3>
         </div>
     )
 }

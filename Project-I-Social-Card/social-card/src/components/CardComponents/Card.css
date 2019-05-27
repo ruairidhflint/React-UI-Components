@@ -1,15 +1,21 @@
 /* All styles for your Card Components live here */
+a {
+    text-decoration: none;
+    color: inherit;
+}
 .card-contents {
     width: 510px;
     margin-left: 75px;
     border: 1px solid lightgrey;
     border-radius: 2%;
+    text-decoration: none;
+    color: inherit;
     
 }
 
 .image-container {
     width: 100%;
-    /* margin-left: 55px; */
+
 }
 
 .image-container img {
@@ -20,7 +26,7 @@
 
 .card-content-bottom{
     width: 100%;
-    /* margin-left: 55px; */
+
 }   
     
 

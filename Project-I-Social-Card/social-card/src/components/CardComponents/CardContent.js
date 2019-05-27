@@ -2,14 +2,13 @@ import React from 'react';
 import './Card.css';
 
 
-function CardContent() {
+function CardContent( {title, text, link}) {
     return(
         <div className="card-content-bottom">
-            <h2>Get Started with React</h2>
-            <p>React makes it painless to create interactive UIs. Design simple
-                views for each state in your application.
+            <h2>{title}</h2>
+            <p>{text}
             </p>
-            <h3>reactjs.org</h3>
+            <h3>{link}</h3>
         </div>
     )
 }

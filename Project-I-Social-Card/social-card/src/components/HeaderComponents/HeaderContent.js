@@ -2,14 +2,11 @@ import React from 'react';
 import './Header.css';
 import HeaderTitle from "./HeaderTitle.js";
 
-function HeaderContent() {
+function HeaderContent( {headerText}) {
     return(
         <div className="header-content">
-            <HeaderTitle />
-            <p>Let's learn React by building simple interfaces with components.
-                Don't try to overthing it, just keep it simple and have fun. Once
-                you feel comfortable using components you are well on your way to
-                mastering React!
+            <HeaderTitle header="Lambda School" subHeader="@LambdaSchool  27 May 2019" />
+            <p>{headerText}
             </p>
 
         </div>

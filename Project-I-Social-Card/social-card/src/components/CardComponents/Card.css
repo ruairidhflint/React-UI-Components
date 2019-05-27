@@ -1,1 +1,37 @@
 /* All styles for your Card Components live here */
+.card-contents {
+    width: 510px;
+    margin-left: 75px;
+    border: 1px solid lightgrey;
+    border-radius: 2%;
+    
+}
+
+.image-container {
+    width: 100%;
+    /* margin-left: 55px; */
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 2%;
+}
+
+.card-content-bottom{
+    width: 100%;
+    /* margin-left: 55px; */
+}   
+    
+
+h2, p{
+    font-size: 1rem;
+    margin: 0.4rem;
+}
+
+h3{
+    color: lightgrey;
+    font-size: 0.9rem;
+    padding-left: 5px;
+    margin: 0px;
+}

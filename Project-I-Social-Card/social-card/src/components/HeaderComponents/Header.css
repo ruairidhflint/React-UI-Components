@@ -1,1 +1,33 @@
 /* All styles for your header Components live here */
+
+header{
+    display: flex;
+    /* border: 1px solid black; */
+    width: 600px;
+}
+
+.img-container{
+    width: 200px;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+.title {
+    display: flex;
+    align-items: baseline;
+}
+
+.title h2, p{
+    font-size: 1rem;
+    margin: 0.4rem;
+}
+
+.title h3  {
+    color: lightgrey;
+    font-size: 0.9rem;
+    padding: 0px;
+    margin: 0px;
+}

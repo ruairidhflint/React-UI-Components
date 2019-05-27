@@ -1,17 +1,14 @@
 import React from 'react';
 import './Card.css';
 
-
-function CardContent( {title, text, link}) {
-    return(
-        <div className="card-content-bottom">
-            <h2>{title}</h2>
-            <p>{text}
-            </p>
-            <h3>{link}</h3>
+function CardContent({ cardTitle, cardText, cardURL }) {
+    return (
+        <div className="card-content-main">
+            <h2>{cardTitle}</h2>
+            <p>{cardText}</p>
+            <h3>{cardURL}</h3>
         </div>
     )
 }
-
 
 export default CardContent;

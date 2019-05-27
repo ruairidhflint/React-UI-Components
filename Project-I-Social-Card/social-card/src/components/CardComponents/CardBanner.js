@@ -1,13 +1,10 @@
 import React from 'react';
 import './Card.css';
 
-function CardBanner( {imageURL}){
+function CardBanner({cardImageURL}){
     return(
-        <div className="image-container">
-            <img src={imageURL} alt="" />
-        </div>
-    )
+        <img src={cardImageURL} alt="" />
+    );
 }
-
 
 export default CardBanner;

@@ -7,3 +7,7 @@
   border: 1px solid dodgerblue;
   width: 600px;
 }
+
+.test{
+  display: flex;
+}

@@ -3,13 +3,12 @@ import './Card.css';
 import CardBanner from './CardBanner.js';
 import CardContent from './CardContent';
 
-function CardContainer(){
+function CardContainer({one, two, three, four}){
     return(
         <div className="card-contents">
-        <a href="http://reactjs.org">
-            <CardBanner imageURL="https://tk-assets.lambdaschool.com/fcd75197-7d12-46ec-bc9e-4130f34822fa_reactbackground.png"/>
-            <CardContent title="Get Started with React" text="React makes it painless to create interactive UIs. Design simple
-                views for each state in your application." link="reactjs.org" />
+        <a href={four}>
+            <CardBanner imageURL={one}/>
+            <CardContent title={two} text={three} link={four}/>
         </a>
         </div>
     )

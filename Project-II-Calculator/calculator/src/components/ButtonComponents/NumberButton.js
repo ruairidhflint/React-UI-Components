@@ -1,21 +1,30 @@
 import React from 'react';
 import './Button.css';
 
-
 function NumberButton(props){
-    const { number, buttonStyle} = props;
+    const { text, buttonStyle} = props;
     
-    function clickHandler(){
-        console.log(number);
-    }
+
     return(
-        <button onClick={clickHandler} className={buttonStyle}>
-            {number}
+        <button className={buttonStyle}>
+            {text}
         </button>
     );
 }
 
+function CreateButtons(props){
+    const  { links } = props;
+   
+    return (
+        <>
+            {
+             links.map(link => {
+                 return <NumberButton text={link.text} buttonStyle={link.buttonStyle} /> 
+             })
+            }
+        </>
+    );
+}
 
-export default NumberButton;
 
-
+export default CreateButtons;

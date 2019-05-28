@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import CalculatorDisplay from './components/DisplayComponents/CalculatorDisplay.js';
-import NumberButton from './components/ButtonComponents/NumberButton.js';
+import CreateButtons from './components/ButtonComponents/NumberButton.js';
 import ActionButton from './components/ButtonComponents/ActionButton.js';
 
 const App = () => {
@@ -9,34 +9,23 @@ const App = () => {
     <div className="calculator">
       <div className="display-row">
         <CalculatorDisplay displayNumber="0" /></div>
-      <div className="row">
-        <ActionButton action="clear" buttonStyle="largeActionButton" />
-        <ActionButton action="%" buttonStyle='smallActionButton' />
-      </div>
-      <div className="row">
-        <NumberButton number="7" buttonStyle='smallButton' />
-        <NumberButton number="8" buttonStyle='smallButton' />
-        <NumberButton number="9" buttonStyle='smallButton' />
-        <ActionButton action="x" buttonStyle='smallActionButton' />
-      </div>
-      <div className="row">
-        <NumberButton number="4" buttonStyle='smallButton' />
-        <NumberButton number="5" buttonStyle='smallButton' />
-        <NumberButton number="6" buttonStyle='smallButton' />
-        <ActionButton action="-" buttonStyle='smallActionButton' />
-      </div>
-      <div className="row">
-        <NumberButton number="1" buttonStyle='smallButton' />
-        <NumberButton number="2" buttonStyle='smallButton' />
-        <NumberButton number="3" buttonStyle='smallButton' />
-        <ActionButton action="+" buttonStyle='smallActionButton' />
-      </div>
-      <div className="row">
-        <NumberButton number="0" buttonStyle="largeButton" />
-        <ActionButton action="=" buttonStyle='smallActionButton' />
+      <div>
+        <ActionButton action="clear" buttonStyle="largeButton" />
+        <CreateButtons links={buttonContent}/>
+        <ActionButton action="0" buttonStyle="largeButton" />
+        <CreateButtons links={buttonContent2}/>
       </div>
     </div>
   );
 };
+
+
+const buttonContent = [{text:"%", buttonStyle:"smallActionButton"}, {text: "7", buttonStyle:"smallButton"},
+{text: "8", buttonStyle:"smallButton"}, {text: "9", buttonStyle:"smallButton"}, {text: "x", buttonStyle:"smallActionButton"},
+{text: "4", buttonStyle:"smallButton"}, {text: "5", buttonStyle:"smallButton"}, {text: "6", buttonStyle:"smallButton"}, {text: "-", buttonStyle:"smallActionButton"},
+{text: "1", buttonStyle:"smallButton"}, {text: "2", buttonStyle:"smallButton"}, {text: "3", buttonStyle:"smallButton"}, {text: "+", buttonStyle:"smallActionButton"},
+ ];
+
+ const buttonContent2 = [{text: "=", buttonStyle:"smallActionButton"}];
 
 export default App;

@@ -3,12 +3,13 @@ import './Button.css';
 
 
 function ActionButton(props){
-    const { action, buttonStyle} = props;
+    const { action, buttonStyle, onClick} = props;
     return(
-        <button className={buttonStyle}>
+        <button onClick={onClick} className={buttonStyle}>
             {action}
         </button>
     );
 }
+
 
 export default ActionButton;

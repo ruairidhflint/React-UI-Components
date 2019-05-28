@@ -1,1 +1,35 @@
-/* All styles for your header Components live here */
+.head-cont {
+    display: flex;
+}
+
+.head-left {
+    max-width: 55px;
+}
+
+.head-left img {
+    max-width: 100%;
+    height: auto;
+}
+
+.head-right{
+    margin: 0.3rem;
+    max-width: 535px;
+}
+
+h2 {
+  font-size: 1.0rem;
+  display: inline;
+}
+
+h3 {
+    font-size: 0.9rem;
+    display: inline;
+    color: darkgrey;
+  }
+
+p {
+    padding: 0;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+    

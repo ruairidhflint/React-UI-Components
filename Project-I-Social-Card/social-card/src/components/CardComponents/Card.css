@@ -1,1 +1,24 @@
 /* All styles for your Card Components live here */
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.card-container{
+    max-width: 590px;
+}
+
+.card-image{
+    max-width: 535px;
+    margin-left: 55px;
+}
+
+.card-image img {
+    width: 92%;
+    height: auto;
+    border-radius: 2%;
+}
+
+.card-content {
+    max-width: 535px;
+    margin-left: 55px;
+}

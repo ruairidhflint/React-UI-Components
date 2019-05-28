@@ -1,0 +1,17 @@
+footer{
+    max-width: 250px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 55px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.test1{
+    cursor: pointer;
+}
+.test1:hover {
+    opacity: 0.5
+}
+

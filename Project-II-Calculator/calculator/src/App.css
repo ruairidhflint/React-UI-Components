@@ -26,6 +26,7 @@ footer, header, hgroup, menu, nav, section {
 body {
     line-height: 1;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 ol, ul {
 	list-style: none;
@@ -45,8 +46,12 @@ table {
 
 .calculator{
     width: 440px;
-    height: 620px;
-    border: 1px solid black;
+    height: 641px;
+    border: 1px solid darkgrey;
     display: flex;
     flex-direction: column;
+}
+
+.row {
+    display: flex;
 }

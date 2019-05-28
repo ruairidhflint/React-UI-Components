@@ -4,8 +4,12 @@ import './Button.css';
 
 function NumberButton(props){
     const { number, buttonStyle} = props;
+    
+    function clickHandler(){
+        console.log(number);
+    }
     return(
-        <button className={buttonStyle}>
+        <button onClick={clickHandler} className={buttonStyle}>
             {number}
         </button>
     );

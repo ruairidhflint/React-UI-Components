@@ -1,0 +1,13 @@
+.display {
+    height: 140px;
+    background-color: #24292e;
+    color: white;
+    border-bottom: 1px solid darkgrey;
+}
+
+h1 {
+    text-align: right;
+    font-size: 6rem;
+    margin-right: 1rem;
+    padding-top: 1rem;
+}

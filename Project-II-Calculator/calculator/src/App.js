@@ -1,23 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
+import CalculatorDisplay from './components/DisplayComponents/CalculatorDisplay.js';
+import CreateButtons from './components/ButtonComponents/NumberButton.js';
+import ActionButton from './components/ButtonComponents/ActionButton.js';
+
+
 
 const App = () => {
+  let [myDisplay, updateMyDisplay] = useState(0);
+  
+  function renderNumber(x){
+    updateMyDisplay(myDisplay = x.target.textContent)
+  }
+
+  function setToZero(x){
+    updateMyDisplay(myDisplay = 0)
+
+  }
+  
   return (
-    <div>
-      <h3>Welcome to React Calculator</h3>
-      <p>
-        We have given you a starter project. You'll want to build out your
-        components in their respective files, remove this code and replace it
-        with the proper components.
-      </p>
-      <p>
-        <strong>
-          Don't forget to `default export` your components and import them here
-          inside of this file in order to make them work.
-        </strong>
-      </p>
+    <div className="calculator">
+      <div className="display-row">
+        <CalculatorDisplay displayNumber={myDisplay} /></div>
+      <div>
+        <ActionButton  onClick={setToZero} action="clear" buttonStyle="largeButton" />
+        <CreateButtons  onClick={renderNumber} links={buttonContent}/>
+  
+      </div>
     </div>
   );
 };
+
+
+
+
+ const buttonContent = [{text:"%", buttonStyle:"smallActionButton"}, {text: "7", buttonStyle:"smallButton"},
+{text: "8", buttonStyle:"smallButton"}, {text: "9", buttonStyle:"smallButton"}, {text: "x", buttonStyle:"smallActionButton"},
+{text: "4", buttonStyle:"smallButton"}, {text: "5", buttonStyle:"smallButton"}, {text: "6", buttonStyle:"smallButton"}, {text: "-", buttonStyle:"smallActionButton"},
+{text: "1", buttonStyle:"smallButton"}, {text: "2", buttonStyle:"smallButton"}, {text: "3", buttonStyle:"smallButton"}, {text: "+", buttonStyle:"smallActionButton"},
+{text: "0", buttonStyle:"largeButton"}, {text: "=", buttonStyle:"smallActionButton"}];
 
 export default App;

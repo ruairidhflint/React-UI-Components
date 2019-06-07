@@ -15,23 +15,24 @@ class App extends Component {
   }
 
   display = (value) => {
-
-    let result = this.state.display.join('')
-
+    
     if (value === "="){
+      let result = this.state.operation.join('');
       this.setState({
-        display: eval(result)
+        display: [eval(result)],
+        operation: [eval(result)]
       })
     }
+    
     else {
       this.setState({
         display: this.state.display.concat(value),
         operation: this.state.display.concat(value)
       })
     }
+
+
   }
-
-
 
 clear = () => {
   this.setState({
@@ -51,7 +52,7 @@ render() {
         {buttonContent.map(button => {
           return (
             <NumberButton
-              onClick={this.display}
+              key={button.value} onClick={this.display}
               content={button}
             />
           )
